@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Базовый JavaScript и работа с браузером">
+  <meta name="author" content="Potapov Viktor">
+  <title>Проект Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class= "body">
+  <div class="root root_centered">
+    <header class="header">
+      <div alt="Логотип Mesto Russia" class="header__logo" alt = "логотип"></div>
+    </header>
+    <main>
+      <section class="profile">
+        <div class="user">
+          <img src="./images/AvatarCoustea.svg" alt="Жак-Ив Кусто" class="profile__avatar">
+          <div class="profileinfo">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__editbutton button-hovered" type="button" title="редактировать"></button>
+            <p class="profile__position">Исследователь океана</p>
+          </div>
+        </div>  
+        <button class="addbutton button-hovered" type="button" title="добавить"></button>
+      </section>
+      <section class="elements-container">
+        <ul class= "elements">
+          <li class="element">
+            <img src="./images/karachaevsk.png" alt="Карачаевск фото" class="element__image">
+            <div class="element__container">
+              <p class="element__text">Карачаевск</p>
+              <button  class="element__like button-hovered" type="button" title="лайк"></button>
+            </div>
+          </li>
+          <li class="element">
+            <img src="./images/Elbrus.png" alt="Гора Эльбрус фото" class="element__image">
+            <div class="element__container">
+              <p class="element__text">Гора Эльбрус</p>
+              <button  class="element__like button-hovered" type="button" title="лайк"></button>
+            </div>
+          </li>
+          <li class="element">
+            <img src="./images/Dombay.svg" alt="Домбай фото" class="element__image">
+            <div class="element__container">
+              <p class="element__text">Домбай</p>
+              <button  class="element__like button-hovered" type="button" title="лайк"></button>
+            </div>
+          </li>
+          <li class="element">
+            <img src="./images/Elbrus.png" alt="Гора Эльбрус фото" class="element__image">
+            <div class="element__container">
+              <p class="element__text">Гора Эльбрус</p>
+              <button  class="element__like button-hovered" type="button" title="лайк"></button>
+            </div>
+          </li>
+          <li class="element">
+            <img src="./images/Dombay.svg" alt="Домбай фото" class="element__image">
+            <div class="element__container">
+              <p class="element__text">Домбай</p>
+              <button  class="element__like button-hovered" type="button" title="лайк"></button>
+            </div>
+          </li>
+          <li class="element">
+            <img src="./images/karachaevsk.png" alt="Карачаево-Черкессия фото" class="element__image">
+            <div class="element__container">
+              <p class="element__text">Карачаево-Черкессия</p>
+              <button  class="element__like button-hovered" type="button" title="лайк"></button>
+            </div>
+          </li>
+        </ul>
+      </section>  
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&#169;2020 Mesto Russia</p>
+    </footer>
+
+    <div class="popup">
+      <div class="popup__content">
+        <button class="popup__close" type="button" title="закрыть"  area-label="крестик"></button>
+        <h2 class="popup__title">Редактировать профиль</h2
+          
+          >
+        <form class="popup__form">
+          <input minlength="1" maxlength="20" type="text" name="profile-name"
+            class="popup__input popup__input_type_name">
+          <input minlength="1" maxlength="20" type="text" name="description"
+            class="popup__input popup__input_type_description">
+          <button class="popup__button button-hovered">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<script src="./scripts/popup.js" defer></script>
+</body>

@@ -1,0 +1,16 @@
+.profile__position {
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.78px;
+    font-style: normal;
+    margin: 0;
+}
+
+@media (max-width: 590px) {
+    .profile__position {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center; 
+    }
+}

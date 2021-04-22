@@ -1,17 +1,13 @@
-# Проект 4: Место
+# Project "Mesto"
+### it is the fourth project of Yandex Practicum. <br/>
+It is my first project designed with Java Script. <br/>
+It is look like old version of Instagram). <br/>
+You can use this page in current version of FireFox, Google Chrome, Yandex Browser. <br/>
+#### Technologies:
+* HTML 
+* CSS (flexbox, grid, BEM) <br/>
+* JavaScript.
+#### Link: 
+https://viktorvp.github.io/mesto/
 
-### Обзор
 
-* Figma
-* Картинки
-
-**Figma**
-
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
-
-**Картинки**
-
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
-
-Удачи!
