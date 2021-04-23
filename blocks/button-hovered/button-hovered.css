@@ -3,6 +3,6 @@
 }
 
 .button-hovered:hover {
-    opacity: 0.5;
-    cursor: url('../../images/cursor.svg'), pointer;
+    opacity: 0.6;
+    cursor: pointer;
 }

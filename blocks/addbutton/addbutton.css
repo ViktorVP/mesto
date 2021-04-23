@@ -12,6 +12,6 @@
 @media (max-width: 900px) {
     .addbutton {
         width: 282px;
-        background-image: url(../../images/AddButtonLarge.png);
+        background-image: url(../../images/AddButtonLarge.svg);
     }
 }

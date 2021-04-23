@@ -1,4 +1,4 @@
-.elements {
+.elements-container__elements {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, 282px);
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 590px) {
-    .elements {
+    .elements-container__elements {
         padding-top: 36px;
     }
 }

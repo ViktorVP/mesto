@@ -1,7 +1,7 @@
 .popup__close {
   background-image: url(../../../images/Close.svg);
   background-position: center;
-  background-color: #000000;
+  background-color: transparent;
   border: none;
   outline: none;
   padding: 0;
@@ -16,7 +16,7 @@
 
 @media (max-width: 590px) {
   .popup__close {
-    background-image: url(../../../images/closeSmal.svg);
+    background-image: url(../../../images/CloseSmall.svg);
     width: 26px;
     height: 26px;
     top: -39.5px;

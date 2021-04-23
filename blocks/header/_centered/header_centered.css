@@ -1,16 +1,18 @@
-.root_centered {
+.header_centered {
     margin: 0 auto;
     max-width: 880px;
+    padding-top: 45px;
 }
 
 @media (max-width: 900px) {
-    .root_centered {
+    .header_centered {
         max-width: 581px;
     }
 }
 
 @media (max-width: 590px) {
-    .root_centered {
-        max-width: 282px;
+    .header_centered {
+        max-width: 320px;
+        padding-top: 28px;
     }
 }

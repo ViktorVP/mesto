@@ -1,14 +1,19 @@
 .profile__position {
+    max-width: 516px;
     font-family: inherit;
     font-weight: normal;
     font-size: 18px;
     line-height: 21.78px;
     font-style: normal;
     margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media (max-width: 590px) {
     .profile__position {
+        max-width: 242px;
         font-size: 14px;
         line-height: 17px;
         text-align: center; 

@@ -1,5 +1,5 @@
 .element__like {
-    background-image: url(../../../images/heart.png);
+    background-image: url(../../../images/ElementLike.svg);
     width: 22px;
     height: 19px;
     border: none;
@@ -8,8 +8,12 @@
     padding: 0;
 }
 
+.element__like:hover {
+    opacity: 0.5;
+}
+
 .element__like:active {
-    background-image: url(../../../images/heartActive.png);
+    background-image: url(../../../images/ElementLikeActive.svg);
     width: 22px;
     height: 19px;
 }
