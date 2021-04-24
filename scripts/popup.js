@@ -6,6 +6,7 @@ let userPosition = document.querySelector('.popup__input_type_description')
 let popupButton = document.querySelector('.popup__button');
 let profileName = document.querySelector('.profile__name');
 let profilePosition = document.querySelector('.profile__position')
+let popupForm = document.querySelector('.popup__form');
 
 function open () {
     popup.classList.add('popup_is-opened');
@@ -26,4 +27,4 @@ function formSubmitHandler (evt) {
 
 openPopupButton.addEventListener('click', open);
 closePopupButton.addEventListener('click', close);
-popupButton.addEventListener('submit', formSubmitHandler);
+popupForm.addEventListener('submit', formSubmitHandler);

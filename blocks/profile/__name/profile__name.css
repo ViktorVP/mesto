@@ -11,7 +11,20 @@
     overflow: hidden;
 }
 
-@media (max-width: 590px) {
+@media (max-width: 900px) {
+    .profile__name {
+        max-width: 390px;
+    }
+}
+
+@media (max-width: 730px) {
+    .profile__name {
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width: 598px) {
     .profile__name {
         max-width: 242px;
         font-style: normal;

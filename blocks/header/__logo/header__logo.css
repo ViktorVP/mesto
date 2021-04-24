@@ -6,8 +6,8 @@
 
 @media (max-width: 590px) {
     .header__logo {
-        background-image: url(../../../images/LogoHeaderSmall.svg);
-        width: 103.74;
+        background-size: cover;
+        width: 103.74px;
         height: 24.4px;
         background-repeat: no-repeat;
         margin-left: 27px;
