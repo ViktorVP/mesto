@@ -26,7 +26,7 @@
       </section>
       <section class="elements-container">
         <ul class= "elements-container__elements">
-          <li class="element">
+          <!--<li class="element">
             <img src="./images/karachaevsk.png" alt="Карачаевск фото" class="element__image">
             <div class="element__container">
               <p class="element__text">Карачаевск</p>
@@ -67,7 +67,7 @@
               <p class="element__text">Карачаево-Черкессия</p>
               <button  class="element__like" type="button" title="лайк"></button>
             </div>
-          </li>
+          </li>-->
         </ul>
       </section>  
     </main>
@@ -75,20 +75,50 @@
       <p class="footer__text">&#169;2020 Mesto Russia</p>
     </footer>
 
-    <div class="popup">
+    <div class="popup popup_type_edit">
       <div class="popup__content">
-        <button class="popup__close button-hovered" type="button" title="закрыть"
-        ></button>
+        <button class="popup__close button-hovered popup__close_type_edit" type="button" title="закрыть"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="popup-form">
+        <form class="popup__form popup__form_type_edit" name="popup-form">
           <input minlength="1" maxlength="30" type="text" name="profile-name"
-            class="popup__input popup__input_type_name">
+            class="popup__input popup__input_type_profilename">
           <input minlength="1" maxlength="50" type="text" name="description"
-            class="popup__input popup__input_type_description">
-          <button class="popup__button" type="submit">Сохранить</button>
+            class="popup__input popup__input_type_profiledescription">
+          <button class="popup__button popup__button_type_edit" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
+
+    <div class="popup popup_type_addcard">
+      <div class="popup__content popup__content_type_addcard">
+        <button class="popup__close button-hovered popup__close_type_addcard" type="button" title="закрыть"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form popup__form_type_addcard" name="popup-form">
+          <input minlength="1" maxlength="30" type="text" name="picture-name" placeholder="Название"
+            class="popup__input popup__input_type_picturename">
+          <input minlength="1" type="text" name="picture-link" placeholder="Ссылка на картинку"
+            class="popup__input popup__input_type_picturelink">
+          <button class="popup__button popup__button_type_addcard" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+     <div class="popup popup_type_zoom">
+    <figure class="popup__figure">
+      <img src="" class="popup__picture">
+      <figcaption class="popup__picturesign"></figcaption>
+      <button type="button" class="popup__close button-hovered popup__close_type_picturezoom"></button>
+    </figure>
+  </div>
+<template id=card-template>
+  <li class="element">
+    <img src="./images/karachaevsk.png" alt="Карачаево-Черкессия фото" class="element__image">
+    <button class="element__delete" type="reset" title="удалить"></button>
+    <div class="element__container">
+      <p class="element__text">Карачаево-Черкессия</p>
+      <button  class="element__like" type="button" title="лайк"></button>
+    </div>
+  </li>
+</template>
 <script src="./scripts/popup.js" defer></script>
 </body>
 </html>
