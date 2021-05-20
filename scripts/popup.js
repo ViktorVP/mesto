@@ -3,7 +3,7 @@ const popupEdit = document.querySelector('.popup_type_edit');// попап ре�
 const closePopupButton = document.querySelector('.popup__close_type_edit');//кнопка закрытия  попапа редактирования профиля
 const userName = document.querySelector('.popup__input_type_profilename');//поле ввода имения пользователя
 const userPosition = document.querySelector('.popup__input_type_profiledescription')//поля ввода описания профиля
-const popupButton = document.querySelector('.popup__button_type_edit');//кнопка соххранить профиль пользователя
+const popupButton = document.querySelector('.popup__button_type_edit');//кнопка сохранить профиль пользователя
 const profileName = document.querySelector('.profile__name');//текст имени пользователя в html
 const profilePosition = document.querySelector('.profile__position');//текст описания профиля в html
 const popupForm = document.querySelector('.popup__form_type_edit');//форма попапв редактирования профиля
@@ -20,6 +20,7 @@ const closeBigPopupButton = document.querySelector('.popup__close_type_picturezo
 const popupPictureZoom = document.querySelector('.popup__picture');//увеличенная картинка
 const popupPictureSign = document.querySelector('.popup__picturesign');//подпись под увеличенной картинкой
 const popupBig = document.querySelector('.popup_type_zoom');
+const popups = document.querySelectorAll('.popup')
 //массив карточек
 const initialCards = [
   {
@@ -48,15 +49,57 @@ const initialCards = [
   }
 ];
 
+
 //функция открытия
-function open(popupElement) {
-  popupElement.classList.add('popup_is-opened');
+function open(popup) {
+  popup.classList.add('popup_is-opened');
+  document.addEventListener('keydown', closeEscape);;
+  closeError()
+  enableValidation({
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__button',
+    inactiveButtonClass: 'popup__button_disabled',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__input-error_active'
+  });
 }
 
 //функция закрытия
-function close(popupElement) {
-  popupElement.classList.remove('popup_is-opened');
-}
+function close(popup) {
+  popup.classList.remove('popup_is-opened');
+  document.removeEventListener('keydown', closeEscape)
+};
+
+// закрытие по клику на оверлэй
+popups.forEach(popupElement => popupElement.addEventListener('click', function (evt) {
+  if (evt.target === evt.currentTarget) {
+    close(popupElement);
+  }
+}));
+
+//закрытие попапа по нажатию на Esc
+function closeEscape(evt) {
+  if (evt.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_is-opened');
+    close(popupOpened);
+  };
+};
+
+function closeError() {
+  const formList = document.querySelectorAll('.popup');
+  formList.forEach(function () {
+    const inputList = document.querySelectorAll('.popup__input');
+    inputList.forEach(function (inputElement) {
+      inputElement.classList.remove('popup__input_type_error');
+      inputElement.value = '';
+    });
+    const spanText = document.querySelectorAll('.popup__input-error');
+    spanText.forEach(function (item) {
+      item.textContent = '';
+    })
+  })
+};
 
 //вызов функции открытия попапа редактирования профиля
 openPopupButton.addEventListener('click', function () {
@@ -68,7 +111,7 @@ openPopupButton.addEventListener('click', function () {
 //вызов функции открытия попапа добавления карточки
 openAddCardButton.addEventListener('click', function () {
   open(popupAddCard);
-})
+});
 
 //вызов функции закрытия попапа редактирования профиля
 closePopupButton.addEventListener('click', function () {
@@ -78,12 +121,14 @@ closePopupButton.addEventListener('click', function () {
 //вызов функции закрытия попапа добавления карточки
 closeAddCardPopupButton.addEventListener('click', function () {
   close(popupAddCard);
-})
+});
 
 //вызов функции закрытия попапа увеличенной картинки
 closeBigPopupButton.addEventListener('click', function () {
   close(popupBig);
-})
+});
+
+
 
 //функция отправки формы редактирования профиля
 function formSubmitHandler(evt) {
@@ -102,7 +147,7 @@ function openBigImage(name, link) {
   popupPictureSign.textContent = name;
   popupPictureZoom.src = link;
   open(popupBig);
-}
+};
 
 //функция создания карточки
 function createCard(name, link) {
