@@ -1,0 +1,18 @@
+.header_centered {
+    margin: 0 auto;
+    max-width: 880px;
+    padding-top: 45px;
+}
+
+@media (max-width: 900px) {
+    .header_centered {
+        max-width: 581px;
+    }
+}
+
+@media (max-width: 598px) {
+    .header_centered {
+        max-width: 320px;
+        padding-top: 28px;
+    }
+}

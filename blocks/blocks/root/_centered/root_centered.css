@@ -1,0 +1,16 @@
+.root_centered {
+    margin: 0 auto;
+    max-width: 880px;
+}
+
+@media (max-width: 900px) {
+    .root_centered {
+        max-width: 581px;
+    }
+}
+
+@media (max-width: 598px) {
+    .root_centered {
+        max-width: 282px;
+    }
+}
