@@ -7,6 +7,7 @@ You can use this page in current version of FireFox, Google Chrome, Yandex Brows
 * HTML 
 * CSS (flexbox, grid, BEM) <br/>
 * JavaScript.
+* OOP
 #### Link: 
 https://viktorvp.github.io/mesto/
 
